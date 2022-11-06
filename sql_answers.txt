@@ -1,0 +1,23 @@
+information stored in a table:
+1.a table that links between a crossword and every clue he has.
+includes id of a table and id of clues(both can appear multiple times)
+the primary key will be both the table id and the clue id
+
+2.a table of all of the words that are clues.
+a primary key used to identify them
+an answer id that reffers to their answer which is in another table
+ 
+3. a table of all the words that are answers
+including a unique primary key to identify them and their length
+ 
+infromation that is not stored in a table:
+position of each answer in the puzzle.
+the input of a user will not be stored in a table,
+but will be compared with the actual answers.
+the score will be saved in a variable and not inside a table.
+the current word that the user is trying to solve (his position).
+
+4. commands i've used:
+CREATE TABLE puzzle (id INTEGER , clue_id INTEGER),PRIMARY KEY(id, clue_id);
+CREATE TABLE clues (id INTEGER PRIMARY KEY, value text, answer_id INTEGER);
+CREATE TABLE answers (id INTEGER PRIMARY KEY, value text, length INTEGER);
